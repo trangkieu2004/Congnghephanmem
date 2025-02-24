@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Màu nền cho trang */
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  /* align-items: center; Căn giữa theo chiều dọc */
+  height: 100vh; /* Chiều cao toàn bộ viewport */
+}
+
+
+.register-container {
+  background-color: #FFCC99; /* Màu nền cam nhạt */
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Căn giữa nội dung */
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #F4983D; /* Màu cam cho nút */
+  color: black;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #e68a00; /* Màu tối hơn khi hover */
+}
+
+p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+a {
+  color: blue;/* Màu cho liên kết */
+  margin: 0;
+  text-decoration: none;
+}
+.dangnhap{
+  font-size: 20px;
+}

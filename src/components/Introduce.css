@@ -1,0 +1,100 @@
+/* src/components/Introduce.css */
+.container {
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-size: 64px;
+  color: #D29150;
+}
+
+.divider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.divider {
+  flex: 0 0 15%;
+  border: 3px solid #FE9328; /* Đường kẻ */
+  margin: 0 10px; /* Khoảng cách giữa đường kẻ và chân mèo */
+}
+.paw-print {
+  width: 90px; /* Kích thước chân mèo */
+  height: auto;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Ba cột */
+  gap: 20px;
+  align-items: start; /* Căn chỉnh các phần tử lên đầu */
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.center-section {
+  display: flex;
+  justify-content: center; /* Căn giữa ảnh mèo */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px;
+  box-shadow: none;
+}
+
+.info-box img {
+  width: 50px; /* Thay đổi kích thước icon nếu cần */
+  margin-right: 10px;
+}
+
+.cat-image {
+  width: 100%; /* Đảm bảo ảnh mèo chiếm toàn bộ chiều rộng cột giữa */
+  max-width: 300px; /* Giới hạn chiều rộng ảnh mèo */
+  margin: 20px 0;
+}
+p{
+  font-size: 24px;
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+strong{
+  color: #E98420;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+.left-align{
+  text-align: left;
+}
+.right-align{
+  text-align: right;
+}
+h2{
+  color: #F4983D;
+  font-size: 54px;
+  text-align: left;
+}
+span {
+  color: #F4983D;
+}
+.left {
+  text-align: left;
+  font-size: 24px;
+  margin-top: 30px;
+}
+h1 {
+  color: #F4983D;
+  margin-bottom: 50px;
+}

@@ -1,0 +1,82 @@
+.service-detail-container {
+  /* max-width: 800px; */
+  width: 100%;
+  margin: 20px auto; /* Căn giữa */
+  padding: 20px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  background-color: white;
+}
+
+.service-info {
+  display: flex; /* Sử dụng Flexbox để căn chỉnh */
+  margin-bottom: 20px; /* Khoảng cách giữa thông tin và mô tả */
+  margin-top: 50px;
+}
+
+.detail-image {
+  width: 300px; /* Chiều rộng của hình ảnh */
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+  margin-left: 50px; /* Khoảng cách giữa hình ảnh và thông tin */
+}
+
+.infont {
+  flex: 1; /* Để thông tin chiếm phần còn lại */
+  display: flex;
+  color: black;
+  font-size: 36px;
+  justify-content: flex-start;
+  flex-direction: column; /* Đặt thông tin theo chiều dọc */
+}
+
+.rating, .weight, .price, .order-button {
+  display: flex; /* Sử dụng Flexbox cho các phần này */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin: 10px 0; /* Khoảng cách giữa các phần */
+  justify-content: flex-start;
+}
+.order-button {
+  background-color: #FFCC99; /* Màu nền nút */
+  color: black;
+  padding: 10px 15px;
+  border: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px; /* Khoảng cách giữa nút và thông tin trên */
+  display: inline-block;
+  font-size: 36px; /* Để nút chỉ mở rộng vừa đủ với nội dung */
+  width: fit-content; /* Để nút chỉ rộng theo nội dung */
+  white-space: nowrap;
+}
+
+.order-button:hover {
+  background-color: #e68a00; /* Màu nền khi hover */
+}
+
+.description {
+  margin-top: 20px; /* Khoảng cách giữa thông tin dịch vụ và mô tả */
+  border-top: 1px solid #ddd; /* Đường kẻ phân cách */
+  padding-top: 20px; /* Khoảng cách từ đường kẻ đến nội dung */
+}
+h2{
+  font-size: 40px;
+  color: black;
+  font-family: 'Telex', sans-serif;
+}
+.weight-container {
+  display: flex; /* Sử dụng Flexbox để căn chỉnh các hộp */
+  gap: 10px; /* Khoảng cách giữa các hộp */
+  margin: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+.weight-box {
+  border: 1px solid #ccc; /* Đường viền cho hộp */
+  border-radius: 5px; /* Góc bo tròn */
+  padding: 10px 15px; /* Khoảng cách bên trong hộp */
+  background-color: #f9f9f9; /* Màu nền */
+  font-size: 14px; /* Kích thước chữ */
+  text-align: center; /* Căn giữa chữ */
+}
