@@ -11,10 +11,10 @@
 }
 
 .service-card {
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
-  background-color: #fff;
+  background-color: #FFFFFF;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 30%; /* Điều chỉnh kích thước của các card */
   display: flex;
@@ -36,12 +36,12 @@ h2 {
 
 h3 {
   font-size: 20px;
-  color: #333;
+  color: black;
   margin-top: 10px;
 }
 
 p {
-  color: #777;
+  color: black;
   margin: 5px 0;
 }
 .price-container {

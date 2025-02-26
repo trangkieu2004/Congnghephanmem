@@ -1,4 +1,7 @@
 /* src/components/Introduce.css */
+.container-fluid {
+  background-color: #FFFFFF;
+}
 .container {
   padding: 20px;
   font-family: 'Inter', sans-serif;

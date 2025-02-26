@@ -1,0 +1,41 @@
+.forgot-password-container {
+  background-color: #FFCC99;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  margin: 50px auto;
+}
+
+.forgot-password-container h2 {
+  margin-bottom: 20px;
+}
+
+.forgot-password-container input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+}
+
+.forgot-password-container button {
+  padding: 10px;
+  background-color: #F4983D;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.forgot-password-container button:hover {
+  background-color: #ff6b30;
+}
+
+.forgot-password-container a {
+  display: block;
+  margin-top: 10px;
+  color: black;
+  text-decoration: none;
+}

@@ -3,10 +3,7 @@
   width: 100%;
   margin: 20px auto; /* Căn giữa */
   padding: 20px;
-  /* border: 1px solid #ddd; */
-  /* border-radius: 8px; */
-  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .service-info {
@@ -58,7 +55,7 @@
 
 .description {
   margin-top: 20px; /* Khoảng cách giữa thông tin dịch vụ và mô tả */
-  border-top: 1px solid #ddd; /* Đường kẻ phân cách */
+  border-top: 1px solid black; /* Đường kẻ phân cách */
   padding-top: 20px; /* Khoảng cách từ đường kẻ đến nội dung */
 }
 h2{
@@ -73,10 +70,10 @@ h2{
 }
 
 .weight-box {
-  border: 1px solid #ccc; /* Đường viền cho hộp */
+  border: 1px solid black; /* Đường viền cho hộp */
   border-radius: 5px; /* Góc bo tròn */
   padding: 10px 15px; /* Khoảng cách bên trong hộp */
-  background-color: #f9f9f9; /* Màu nền */
+  background-color: #FFFFFF; /* Màu nền */
   font-size: 14px; /* Kích thước chữ */
   text-align: center; /* Căn giữa chữ */
 }

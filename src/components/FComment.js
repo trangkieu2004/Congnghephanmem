@@ -2,9 +2,10 @@ import React from "react";
 import "./FComment.css";
 import logo from "../img/anhnen.png";
 import anhnen from "../img/image 1.png";
-import search from '../img/Search.png';
-import { Link , useNavigate} from 'react-router-dom';
-const FComment = ({onLoginClick}) => {
+import search from "../img/Search.png";
+import vector from "../img/Vector.png";
+import { Link, useNavigate } from "react-router-dom";
+const FComment = ({ username, onLogout }) => {
   const navigate = useNavigate();
 
   return (
@@ -17,19 +18,29 @@ const FComment = ({onLoginClick}) => {
           <nav className="nav">
             <ul className="nav-list d-flex justify-content-center m-0">
               <li className="nav-item mx-3">
-                <Link to="/home" className="nav-link">Trang Chủ</Link>
+                <Link to="/home" className="nav-link">
+                  Trang Chủ
+                </Link>
               </li>
               <li className="nav-item mx-3">
-                <Link to="/introduce" className="nav-link">Giới Thiệu</Link>
+                <Link to="/introduce" className="nav-link">
+                  Giới Thiệu
+                </Link>
               </li>
               <li className="nav-item mx-3">
-                <Link to="/services" className="nav-link">Dịch Vụ</Link>
+                <Link to="/services" className="nav-link">
+                  Dịch Vụ
+                </Link>
               </li>
               <li className="nav-item mx-3">
-                <Link to="/vet" className="nav-link">Bác Sĩ Thú Y</Link>
+                <Link to="/vet" className="nav-link">
+                  Bác Sĩ Thú Y
+                </Link>
               </li>
               <li className="nav-item mx-3">
-                <Link to="/contact" className="nav-link">Liên Hệ</Link>
+                <Link to="/contact" className="nav-link">
+                  Liên Hệ
+                </Link>
               </li>
             </ul>
           </nav>
@@ -41,18 +52,35 @@ const FComment = ({onLoginClick}) => {
             />
             <img className="search-icon" src={search} alt="Search" />
           </div>
-          <span 
-            className="nav-link mx-3" 
-            onClick={() => navigate('/login')} // Điều hướng đến Login
-            style={{ cursor: "pointer", color: "black" }}
-          >
-            Login
-          </span>
+          <div className="d-flex align-items-center nav-link">
+            {username ? (
+              <span style={{ marginLeft: "30px", color: "black", textAlign:"center" }}>
+                {username}
+                <span
+                  onClick={onLogout} // Xử lý đăng xuất
+                  style={{
+                    cursor: "pointer",
+                    color: "black",
+                    marginTop: "5px",
+                  }}
+                >
+                  <img src={vector} alt="Đăng xuất" />
+                </span>
+              </span>
+            ) : (
+              <span
+                className="nav-link mx-3"
+                onClick={() => navigate("/login")} // Điều hướng đến Login
+                style={{ cursor: "pointer", color: "black" }}
+              >
+                Login
+              </span>
+            )}
+          </div>
         </div>
       </header>
       <div className="container-fluid p-0 ">
-        <img
-          src={anhnen} alt="anhlogo" className="img-fluid w-100 anhnen"/>
+        <img src={anhnen} alt="anhlogo" className="img-fluid w-100 anhnen" />
       </div>
     </div>
   );

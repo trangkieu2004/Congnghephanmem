@@ -84,7 +84,8 @@ const CommentDetail = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid body">
+      <div className="container-fluid-body">
+        <div className="container">
         <h1>CÁC DỊCH VỤ TẠI PETSTATION</h1>
         <div className="divider-container">
           <div className="line"></div>
@@ -150,6 +151,8 @@ const CommentDetail = () => {
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
       <div className="container bg-body">
         <h1 className="tieude">ĐỘI NGŨ CHUYÊN GIA & BÁC SĨ</h1>
@@ -213,8 +216,8 @@ const CommentDetail = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid mt-5 feedback">
-        <h2 className="mb-4 tieude fw-bold ">PHẢN HỒI TỪ KHÁCH HÀNG</h2>
+      <div className="mt-5 feedback">
+      <div className="container"> <h2 className="mb-4 tieude fw-bold ">PHẢN HỒI TỪ KHÁCH HÀNG</h2>
         <div className="row justify-content-center">
           {feedbacks.map((feedback, index) => (
             <div key={index} className="col-md-4 mb-4">
@@ -235,7 +238,8 @@ const CommentDetail = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div></div>
+       
       </div>
     </div>
   );

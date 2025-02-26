@@ -25,7 +25,7 @@ h3{
 .center{
   text-align: center;
 }
-.body{
+.container-fluid-body{
   background-color: #FFF8F2;
   margin-top: 70px;
   min-height: 100vh;
