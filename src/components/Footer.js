@@ -29,7 +29,7 @@ const Footer = () => {
         <img src={call} alt="" />
       </div>
       <hr className="dongke" />
-      <div className="footer-note">
+      <div className="note">
         <span>© 2025 PETSTATION</span>
       </div>
     </div>

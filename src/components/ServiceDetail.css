@@ -1,79 +1,143 @@
-.service-detail-container {
-  /* max-width: 800px; */
-  width: 100%;
-  margin: 20px auto; /* Căn giữa */
+.bg-white {
+  background-color: #ffffff;
+}
+
+.max-w-2xl {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  background-color: #FFFFFF;
+  background-color: #fff;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; */
 }
-
-.service-info {
-  display: flex; /* Sử dụng Flexbox để căn chỉnh */
-  margin-bottom: 20px; /* Khoảng cách giữa thông tin và mô tả */
-  margin-top: 50px;
-}
-
-.detail-image {
-  width: 300px; /* Chiều rộng của hình ảnh */
+.arrow-icon {
+  width: 20px;
   height: auto;
-  border-radius: 8px;
-  margin-right: 20px;
-  margin-left: 50px; /* Khoảng cách giữa hình ảnh và thông tin */
 }
-
-.infont {
-  flex: 1; /* Để thông tin chiếm phần còn lại */
+.flex {
   display: flex;
-  color: black;
-  font-size: 36px;
-  justify-content: flex-start;
-  flex-direction: column; /* Đặt thông tin theo chiều dọc */
 }
 
-.rating, .weight, .price, .order-button {
-  display: flex; /* Sử dụng Flexbox cho các phần này */
-  align-items: center; /* Căn giữa theo chiều dọc */
-  margin: 10px 0; /* Khoảng cách giữa các phần */
-  justify-content: flex-start;
+.items-center {
+  align-items: center;
 }
-.order-button {
-  background-color: #FFCC99; /* Màu nền nút */
-  color: black;
-  padding: 10px 15px;
-  border: 1px;
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.w-48 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
+}
+
+.w-12 {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.ml-4 {
+  margin-left: 60px;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.text-xl {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.text-yellow-500 {
+  color: #fbbf24;
+}
+
+.text-gray-400 {
+  color: #d1d5db;
+}
+
+.border {
+  border: 1px solid #d1d5db;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.rounded {
+  border-radius: 0.375rem;
+}
+
+.bg-orange-400 {
+  background-color: #FFCC99;
+  width: fit-content;
+  font-size: 24px;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.text-sm {
+  font-size: 16px;
+}
+
+.text-gray-700 {
+  color: #000000;
+}
+.weight-button {
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px; /* Khoảng cách giữa nút và thông tin trên */
-  display: inline-block;
-  font-size: 36px; /* Để nút chỉ mở rộng vừa đủ với nội dung */
-  width: fit-content; /* Để nút chỉ rộng theo nội dung */
-  white-space: nowrap;
+  background-color: white;
+  transition: background-color 0.2s;
+  margin-right: 10px;
+  width: fit-content;
+}
+.weight-button:hover {
+  background-color: #f0f0f0;
+}
+.flex{
+  display: flex;
+}
+.flex-col {
+  flex-direction: column; /* Căn dọc */
+}
+.justify-between {
+  justify-content: space-between; /* Căn giữa các phần tử */
+}
+.items-center {
+  align-items: center; /* Căn thẳng hàng theo chiều dọc */
+}
+.custom-space {
+  margin-left: 20px; /* Khoảng cách bên trái */
 }
 
-.order-button:hover {
-  background-color: #e68a00; /* Màu nền khi hover */
+.flex > img:first-child {
+  margin-left: 0; /* Không có khoảng cách cho ảnh đầu tiên */
 }
-
-.description {
-  margin-top: 20px; /* Khoảng cách giữa thông tin dịch vụ và mô tả */
-  border-top: 1px solid black; /* Đường kẻ phân cách */
-  padding-top: 20px; /* Khoảng cách từ đường kẻ đến nội dung */
-}
-h2{
-  font-size: 40px;
-  color: black;
-  font-family: 'Telex', sans-serif;
-}
-.weight-container {
-  display: flex; /* Sử dụng Flexbox để căn chỉnh các hộp */
-  gap: 10px; /* Khoảng cách giữa các hộp */
-  margin: 20px 0; /* Khoảng cách trên và dưới */
-}
-
-.weight-box {
-  border: 1px solid black; /* Đường viền cho hộp */
-  border-radius: 5px; /* Góc bo tròn */
-  padding: 10px 15px; /* Khoảng cách bên trong hộp */
-  background-color: #FFFFFF; /* Màu nền */
-  font-size: 14px; /* Kích thước chữ */
-  text-align: center; /* Căn giữa chữ */
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

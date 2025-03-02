@@ -58,7 +58,10 @@
   background-color: #000000; /* Màu sắc của dòng kẻ */
   margin: 10px 0; /* Khoảng cách trên và dưới dòng kẻ */
 }
-.footer-note {
+.note span {
   font-size: 14px;
   color: #5449DC;
+}
+.lienhe{
+  color: #000000;
 }

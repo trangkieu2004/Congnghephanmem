@@ -1,0 +1,64 @@
+.confirmBooking h2{
+  font-size: 64px;
+  color: #D29150;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.divider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.divider {
+  flex: 0 0 15%;
+  border: 3px solid #FE9328; /* Đường kẻ */
+  margin: 0 10px; /* Khoảng cách giữa đường kẻ và chân mèo */
+}
+.letter{
+  padding: 20px;
+}
+.back{
+  display: flex;
+  align-items: center;
+}
+.paw-print {
+  width: 90px; /* Kích thước chân mèo */
+  height: auto;
+}
+.arrow-icon {
+  width: 30px;
+  height: auto;
+  margin-left: 20px;
+}
+.content{
+  background-color: #FFF7EF;
+}
+.content-wrapper{
+  display: flex;
+
+}
+.text-container {
+  flex: 1; /* Cho phép phần văn bản chiếm toàn bộ không gian còn lại */
+}
+.confirm-title {
+  font-size: 50px; /* Kích thước chữ tiêu đề */
+  margin-bottom: 10px;
+  color: #FB820A; /* Khoảng cách dưới tiêu đề */
+  text-align: center;
+}
+.confirm-message {
+  font-size: 40px; /* Kích thước chữ nội dung */
+  text-align: start; /* Canh giữa */
+  margin-bottom: 10px;
+  margin-left: 20px; /* Khoảng cách dưới nội dung */
+}
+.confirm-thank-you {
+  font-size: 16px; /* Kích thước chữ cảm ơn */
+  text-align: center; /* Canh giữa */
+  color: #555; /* Màu chữ */
+}

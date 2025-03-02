@@ -7,7 +7,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.login-container h2 {
   text-align: center;
   color: black;
   font-weight: bold;
@@ -16,7 +16,7 @@ h2 {
 }
 
 .form-group {
-  margin-bottom: 20px; /* Khoảng cách giữa các trường */
+  margin-bottom: 10px; /* Khoảng cách giữa các trường */
 }
 
 input {
@@ -36,6 +36,7 @@ input {
   color: white; /* Màu chữ */
   font-weight: bold;
   font-size: 16px;
+  margin-top: 10px;
   cursor: pointer;
 }
 

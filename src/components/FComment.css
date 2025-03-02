@@ -13,8 +13,10 @@ body {
   color: gray; /* Màu khi hover */
 }
 .nav-list {
+  display: flex;
   padding: 0; /* Bỏ khoảng cách mặc định */
   margin: 0; /* Bỏ margin mặc định */
+  flex-wrap: nowrap;
   list-style: none; /* Loại bỏ dấu chấm */
 }
 
@@ -29,6 +31,7 @@ body {
   grid-template-columns: auto 1fr auto; /* Cột cho logo, nav và ô tìm kiếm */
   align-items: center; /* Căn giữa theo chiều dọc */
   padding: 10px 20px; /* Khoảng đệm cho header */
+  white-space: nowrap;
 }
 .search-container {
   position: relative; /* Để định vị biểu tượng kính lúp */
@@ -59,4 +62,10 @@ body {
 }
 .phandau {
   height: 170px;
+}
+.nav-link img {
+  
+  width: 20px; /* Kích thước biểu tượng */
+  height: 20px; /* Kích thước biểu tượng */
+  margin-left: 10px;
 }

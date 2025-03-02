@@ -65,6 +65,14 @@ const Signup = () => {
           onChange={handleChange}
           required
         />
+        <input
+          type="password"
+          name="password"
+          placeholder="Nhập lại mật khẩu"
+          value={formData.password}
+          onChange={handleChange}
+          required
+        />
         <button type="submit">Đăng ký</button>
       </form>
       <p>Bạn đã có tài khoản?</p>

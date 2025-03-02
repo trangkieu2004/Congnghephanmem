@@ -2,6 +2,7 @@
 .spa-services-container {
   text-align: center;
   padding: 20px;
+  background-color: #FFFFFF;
 }
 
 .services {
@@ -28,16 +29,20 @@
   border-radius: 10px;
 }
 
-h2 {
+.spa-services-container h2 {
   font-size: 64px;
   color: #D29150;
   margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  text-align: center;
 }
 
 h3 {
   font-size: 20px;
   color: black;
   margin-top: 10px;
+
 }
 
 p {

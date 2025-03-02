@@ -1,16 +1,19 @@
 .text{
   color: #D29150;
   font-size: 64px;
+  padding-left: 20px;
 
 }
-p{
+.title-p{
   font-size: 32px;
   color: #999599;
-  font-family: Inter;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Inter", sans-serif;
 }
 .open{
   background-color: #ECBE90;
-  border-radius: 10px;
+  border-radius: 50px;
   width: auto;
   
 }
@@ -76,6 +79,18 @@ h5{
   font-size: 25px;
   text-align: center;
 }
+.card-text{
+  color: black;
+  text-align: left;
+  font-weight: bold;
+
+}
+.text-p {
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 5px;
+}
 .tieude{
   text-align: left;
   margin: 10px;
@@ -96,12 +111,28 @@ h5{
 }
 .feedback{
   background-color: #FFF7EF;
+  height: 844px;
 }
 .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
 }
-
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+}
 .card:hover {
   transform: scale(1.05);
+}
+.offset-card {
+  margin-top: 40px; /* Tạo khoảng cách cho thẻ thứ hai */
+  transform: translateY(100px); /* Đẩy thẻ thứ hai xuống thêm 20px */
+}
+.text-start {
+  margin: 20px;
 }

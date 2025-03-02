@@ -1,7 +1,7 @@
 .forgot-password-container {
   background-color: #FFCC99;
   padding: 20px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   text-align: center;
   width: 300px;
   margin: 50px auto;
@@ -9,12 +9,17 @@
 
 .forgot-password-container h2 {
   margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
 }
 
 .forgot-password-container input {
   padding: 10px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border: 1px solid #FFFFFF;
   border-radius: 5px;
 }
@@ -26,6 +31,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 10px;
   width: 100%;
 }
 

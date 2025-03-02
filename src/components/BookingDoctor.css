@@ -1,0 +1,67 @@
+/* BookingDoctor.css */
+.booking-doctor_container {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 60px;
+  flex-wrap: wrap; /* Cho phép các thẻ bác sĩ xuống dòng khi không đủ không gian */
+}
+
+.booking-doctor_card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 389px; /* Đặt chiều rộng cho mỗi thẻ */
+  height: 443px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho thẻ */
+  margin: 10px; /* Thêm khoảng cách giữa các thẻ */
+  transition: transform 0.2s; /* Hiệu ứng chuyển động khi hover */
+}
+
+
+.booking-doctor_card img {
+  border-radius: 50%; /* Bo tròn hình ảnh */
+  width: 100px; /* Chiều rộng hình ảnh */
+  height: 100px; /* Chiều cao hình ảnh */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+.booking-doctor_card h3{
+  color: #F4983D;
+  margin-bottom: 20px;
+}
+.booking-doctor_card p{
+  color: black;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.booking-doctor_button {
+  background-color: #f68b1e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 245px;
+  padding: 15px;
+  cursor: pointer;
+  margin: 5px 0;
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+.booking-doctor_button:hover {
+  background-color: #e67e22; /* Thay đổi màu nền khi hover */
+}
+.divider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.divider {
+  flex: 0 0 15%;
+  border: 3px solid #FE9328; /* Đường kẻ */
+  margin: 0 10px; /* Khoảng cách giữa đường kẻ và chân mèo */
+}
+.paw-print {
+  width: 90px; /* Kích thước chân mèo */
+  height: auto;
+}

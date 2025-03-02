@@ -26,6 +26,7 @@ const FComment = ({ username, onLogout }) => {
                 <Link to="/introduce" className="nav-link">
                   Giới Thiệu
                 </Link>
+                
               </li>
               <li className="nav-item mx-3">
                 <Link to="/services" className="nav-link">
@@ -33,7 +34,7 @@ const FComment = ({ username, onLogout }) => {
                 </Link>
               </li>
               <li className="nav-item mx-3">
-                <Link to="/vet" className="nav-link">
+                <Link to="/booking-doctor" className="nav-link">
                   Bác Sĩ Thú Y
                 </Link>
               </li>
