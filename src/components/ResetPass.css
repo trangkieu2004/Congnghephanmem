@@ -1,4 +1,4 @@
-.forgot-password-container {
+.reset-password-container {
   background-color: #FFCC99;
   padding: 20px;
   border-radius: 10px;
@@ -6,13 +6,8 @@
   width: 350px;
   margin: 50px auto;
 }
-.reset-password {
-  width: 100%;
-  padding: 20px;
-  border-radius: 8px; /* Bo tròn góc */
-}
 
-.forgot-password-container h2 {
+.reset-password-container h2 {
   margin-bottom: 20px;
   margin-top: 20px;
   font-size: 30px;
@@ -21,7 +16,7 @@
   font-weight: bold;
 }
 
-.forgot-password-container input {
+.reset-password-container input {
   padding: 10px;
   width: 100%;
   margin-bottom: 20px;
@@ -29,7 +24,7 @@
   border-radius: 5px;
 }
 
-.forgot-password-container button {
+.reset-password-container button {
   padding: 10px;
   background-color: #F4983D;
   color: black;
@@ -40,11 +35,11 @@
   width: 100%;
 }
 
-.forgot-password-container button:hover {
+.reset-password-container button:hover {
   background-color: #ff6b30;
 }
 
-.forgot-password-container a {
+.reset-password-container a {
   display: block;
   margin-top: 10px;
   color: black;

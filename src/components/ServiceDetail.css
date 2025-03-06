@@ -3,7 +3,7 @@
 }
 
 .max-w-2xl {
-  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -17,7 +17,10 @@
 .flex {
   display: flex;
 }
-
+.flex-se {
+  display: flex;
+  align-items: flex-start;
+}
 .items-center {
   align-items: center;
 }
@@ -27,30 +30,32 @@
 }
 
 .w-48 {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 10px;
 }
 
 .w-12 {
-  width: 50px;
-  height: 50px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 5px;
 }
 
 .ml-4 {
-  margin-left: 60px;
+  margin-left: 100px;
 }
 
 .flex-grow {
   flex-grow: 1;
+  justify-content: start;
 }
 
-.text-xl {
-  font-size: 30px;
-  font-weight: 600;
+.text-xxl {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 0;
 }
 
 .text-yellow-500 {
@@ -100,6 +105,9 @@
 .text-sm {
   font-size: 16px;
 }
+.items-start {
+  align-items: flex-start; /* Căn lên trên cùng */
+}
 
 .text-gray-700 {
   color: #000000;
@@ -112,13 +120,16 @@
   background-color: white;
   transition: background-color 0.2s;
   margin-right: 10px;
+  margin-top: 20px;
+  font-size: 30px;
   width: fit-content;
 }
 .weight-button:hover {
   background-color: #f0f0f0;
 }
-.flex{
+.flex-service{
   display: flex;
+  align-items: start;
 }
 .flex-col {
   flex-direction: column; /* Căn dọc */
@@ -140,4 +151,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
+}
+.text-m {
+  font-size: 30px;
 }

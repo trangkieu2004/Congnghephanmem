@@ -1,0 +1,90 @@
+.backhome{
+  margin-top: 20px;
+  width: 30px;
+  height: auto;
+}
+.container-fluid h1{
+  color: #D29150;
+  margin-bottom: 5px;
+}
+.button-closed {
+  display: flex;
+  align-items: center;
+  justify-items: left;
+  margin: 10px 0;
+}
+.button-closed p {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.divider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.divider {
+  flex: 0 0 15%;
+  border: 3px solid #FE9328; /* Đường kẻ */
+  margin: 0 10px; /* Khoảng cách giữa đường kẻ và chân mèo */
+}
+.paw-print {
+  width: 90px; /* Kích thước chân mèo */
+  height: auto;
+}
+.doctor-detail {
+  background-color: #ffffff;
+  border: 2px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+.doctor-info {
+  display: flex;
+  align-items: center; /* Canh giữa dọc */
+}
+.doctor-image {
+  width: 20%;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-left: 50px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.doctor-name {
+  font-size: 30px; /* Kích thước chữ tên bác sĩ nhỏ hơn */
+  margin-left: 10px;
+}
+.specialty-details {
+  font-size: 20px; /* Kích thước chữ giảm */
+  margin: 5px 0; /* Khoảng cách giữa các dòng */
+  text-align: left;
+  padding-left: 10px;
+}
+.book-appointment-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  background-color: #F4983D;
+  color: white;
+  cursor: pointer;
+}
+
+.book-appointment-button:hover {
+  background-color: #0056b3;
+}
+.doctor-detail h3 {
+  color: #F4983D;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.doctor-detail p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}

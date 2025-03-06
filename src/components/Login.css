@@ -1,8 +1,8 @@
 .login-container {
-  max-width: 400px;
+  width: 350px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #FFCC99; /* Màu nền cam nhạt */
+  background-color: #FFCC99;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -46,14 +46,20 @@ input {
 
 .footer-links {
   display: flex;
-  justify-content: space-between; /* Chia thành 2 bên */
+  justify-content: space-between; 
   margin-top: 20px;
-  font-size: 16px; /* Kích thước chữ cho cả hai bên */
+  font-size: 16px;
 }
 
-.sizechu, .kieuchu {
+.sizechu{
   color: black;
-  text-align: center; /* Căn giữa văn bản trong từng bên */
+  text-align: center;
+  margin-right: 5px;
+}
+.kieuchu {
+  color: black;
+  text-align: center;
+  margin-right: 5px;
 }
 .register-link {
   display: block; /* Để "Đăng ký" nằm dưới "Bạn đã có tài khoản chưa?" */

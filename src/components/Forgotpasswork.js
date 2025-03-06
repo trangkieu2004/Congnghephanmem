@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Forgotpasswork.css';
 
 const Forgotpasswork = () => {
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Xử lý gửi email lấy lại mật khẩu
     console.log('Email:', email);
+    // Chuyển hướng đến trang lấy lại mật khẩu
+    navigate('/resetpassword');
   };
   return (
     <div className="forgot-password-container">

@@ -4,7 +4,7 @@ import picture1 from "../img/Service/image 7.png";
 import muiten from "../img/Service/image 6.png";
 import picture2 from "../img/Service/image 8.png";
 import picture3 from "../img/Service/image 9.png";
-import { useLocation, useNavigate , Link} from "react-router-dom";
+import { useLocation, useNavigate} from "react-router-dom";
 
 const ServiceDetail = () => {
   const location = useLocation();
@@ -21,20 +21,21 @@ const ServiceDetail = () => {
   const handleBooking = () => {
     navigate("/booking", { state: { title, weight: selectedWeight } }); // Đường dẫn đến trang đặt lịch
   };
+  const handleBack = () => {
+    navigate("/service-detail", { state: { title, price, image } })
+  };
 
   return (
     <div className="container-fluid bg-white flex justify-center items-center min-h-screen">
       <div className="max-w-2xl mx-auto p-4 bg-white shadow-md rounded-lg">
         <div className="flex items-center mb-4">
-          <Link to="/services">
-            <img src={muiten} alt="quay-lai" className="arrow-icon" />
-          </Link>
+          <img src={muiten} alt="quay-lai" className="arrow-icon" onClick={handleBack}/>
         </div>
-        <div className="flex">
+        <div className="flex-se items-start">
           <div className="flex-shrink-0">
             <img
               alt={title}
-              className="w-48 h-48 object-cover rounded-lg mb-4"
+              className="w-48 object-cover rounded-lg mb-4"
               src={image}
             />
             <div className="flex space-x-2 mb-4">
@@ -55,13 +56,13 @@ const ServiceDetail = () => {
               />
             </div>
           </div>
-          <div className="ml-4 flex-grow flex-column">
-            <h2 className="text-xl font-semibold text-black mb-1">
+          <div className="ml-4 flex-grow flex-column justify-start">
+            <h2 className="text-xxl font-semibold text-black">
               Tên dịch vụ: {title}
             </h2>
-            <div className="flex flex-col">
+            <div className="flex-service flex-col">
               <div className="flex items-center mb-1">
-                <p className="mr-2">Đánh giá:</p>
+                <p className="mr-2 text-m">Đánh giá:</p>
                 <span className="text-yellow-500">
                   <i className="fas fa-star"></i>
                 </span>
@@ -78,14 +79,15 @@ const ServiceDetail = () => {
                   <i className="fas fa-star"></i>
                 </span>
               </div>
-              <p className="mb-2">Cân nặng:</p>
+              <p className="mb-2 text-m mr-2">Cân nặng:</p>
               <div className="flex space-x-2 mb-1">
+              
                 <button className="weight-button" onClick={() => setSelectedWeight('< 5 kg')}>&lt; 5 kg</button>
                 <button className="weight-button" onClick={() => setSelectedWeight('5 - 10 kg')}>5 - 10 kg</button>
                 <button className="weight-button" onClick={() => setSelectedWeight('10 - 20 kg')}>10 - 20 kg</button>
               </div>
-              <p className="mb-1">{price}</p>
-              <button className="bg-orange-400 text-black px-4 py-2 rounded mb-4" onClick={handleBooking}>
+              <p className="mb-1 mt-4 text-m">{price}</p>
+              <button className="bg-orange-400 text-black px-4 py-2 rounded mb-4 mt-4" onClick={handleBooking}>
                 Đặt lịch
               </button>
             </div>

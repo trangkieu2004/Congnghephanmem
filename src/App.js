@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Introduce from './components/Introduce';
 import Signup from './components/Signup';
 import Forgotpasswork from './components/Forgotpasswork';
+import ResetPass from './components/ResetPass';
 import Service from './components/Service';
 import ServiceDetail from './components/ServiceDetail';
 import AppointmentForm from './components/AppointmentForm';
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/login" element={<Login setUsername={setUsername} />} />
         <Route path="/register" element={<Signup />} />
         <Route path="/forgotpasswork" element={<Forgotpasswork />} />
+        <Route path="/resetpassword" element={<ResetPass />} />
         
         <Route path="/" element={<><FComment username={username} onLogout={() => setUsername('')} /><Home /><Footer /></>} />
         <Route path="/home" element={<><FComment username={username} onLogout={() => setUsername('')} /><Home /><Footer /></>} />
