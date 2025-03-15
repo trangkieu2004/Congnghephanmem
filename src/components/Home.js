@@ -166,7 +166,7 @@ const CommentDetail = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">Dr. Nguyễn Ngọc Mai</h5>
-                <p className="card-text textsize">
+                <p className="card-textof textsize">
                   X-Quang và Siêu âm / Y khoa và nội khoa
                   <br />
                   Hoàng Mai - Hà Nội
@@ -183,7 +183,7 @@ const CommentDetail = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">Dr. Dương Anh Ngọc</h5>
-                <p className="card-text textsize">
+                <p className="card-textof textsize">
                   X-Quang và Siêu âm / Y khoa và nội khoa
                   <br />
                   Hoàng Mai - Hà Nội
@@ -200,7 +200,7 @@ const CommentDetail = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">Dr. Dương Anh Ngọc</h5>
-                <p className="card-text textsize">
+                <p className="card-textof textsize">
                   X-Quang và Siêu âm / Y khoa và nội khoa
                   <br />
                   Hoàng Mai - Hà Nội

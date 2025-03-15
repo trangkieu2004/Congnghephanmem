@@ -65,3 +65,20 @@ a {
 .dangnhap{
   font-size: 20px;
 }
+.eye-icon {
+  position: absolute;
+  right: 10px; /* Đặt biểu tượng con mắt vào bên phải */
+  top: 50%; /* Giữa theo chiều dọc */
+  transform: translateY(-50%); /* Đưa biểu tượng lên giữa */
+  cursor: pointer; /* Con trỏ khi di chuột vào */
+  color: #666; /* Màu sắc biểu tượng */
+}
+.password-container {
+  position: relative;
+  margin-bottom: 15px; /* Khoảng cách giữa các trường */
+}
+
+.password-container input {
+  width: 100%; /* Chiều rộng đầy đủ */
+  padding-right: 40px; /* Khoảng cách cho biểu tượng con mắt */
+}

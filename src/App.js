@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from "react";
-import FComment from './components/FComment';   // Header
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import FComment from './components/FComment';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Login from './components/Login';
@@ -13,10 +14,24 @@ import ServiceDetail from './components/ServiceDetail';
 import AppointmentForm from './components/AppointmentForm';
 import ConfirmBooking from './components/ConfirmBooking';
 import BookingDoctor from './components/BookingDoctor';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Contact from './components/Contact';
+import Account from './components/Account';
+import ServiceStatus from './components/ServiceStatus';
 
 const App = () => {
   const [username, setUsername] = useState('');
+
+  const handleLogout = () => {
+    setUsername('');
+  };
+
+  const renderWithFooter = (Component) => (
+    <>
+      <FComment username={username} onLogout={handleLogout} />
+      <Component />
+      <Footer />
+    </>
+  );
 
   return (
     <Router>
@@ -25,18 +40,19 @@ const App = () => {
         <Route path="/register" element={<Signup />} />
         <Route path="/forgotpasswork" element={<Forgotpasswork />} />
         <Route path="/resetpassword" element={<ResetPass />} />
-        
-        <Route path="/" element={<><FComment username={username} onLogout={() => setUsername('')} /><Home /><Footer /></>} />
-        <Route path="/home" element={<><FComment username={username} onLogout={() => setUsername('')} /><Home /><Footer /></>} />
-        <Route path="/introduce" element={<><FComment username={username} onLogout={() => setUsername('')} /><Introduce /><Footer /></>} />
-        <Route path="/services" element={<><FComment username={username} onLogout={() => setUsername('')} /><Service /><Footer /></>} />
-        <Route path="/booking-doctor" element={<><FComment username={username} onLogout={() => setUsername('')} /><BookingDoctor /><Footer /></>} />
-        <Route path="/service-detail" element={<><FComment username={username} onLogout={() => setUsername('')} /><ServiceDetail /><Footer /></>} />
-        <Route path="/booking" element={<><FComment username={username} onLogout={() => setUsername('')} /><AppointmentForm /><Footer /></>} />
-        <Route path="/confirm" element={<><FComment username={username} onLogout={() => setUsername('')} /><ConfirmBooking /><Footer /></>} />
+        <Route path="/profile" element={renderWithFooter(Account)} />
+        <Route path="/status-service" element={renderWithFooter(ServiceStatus)} />
+        <Route path="/" element={renderWithFooter(Home)} />
+        <Route path="/home" element={renderWithFooter(Home)} />
+        <Route path="/introduce" element={renderWithFooter(Introduce)} />
+        <Route path="/services" element={renderWithFooter(Service)} />
+        <Route path="/booking-doctor" element={renderWithFooter(BookingDoctor)} />
+        <Route path="/contact" element={renderWithFooter(Contact)} />
+        <Route path="/service-detail" element={renderWithFooter(ServiceDetail)} />
+        <Route path="/booking" element={renderWithFooter(AppointmentForm)} />
+        <Route path="/confirm" element={renderWithFooter(ConfirmBooking)} />
       </Routes>
     </Router>
-    
   );
 };
 

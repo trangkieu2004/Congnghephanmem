@@ -1,0 +1,106 @@
+
+
+.container-profile {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  height: 100hv;
+}
+
+.container-profile h2 {
+  text-align: center;
+  color: #D29150;
+  font-weight: bold;
+  font-size: 64px;
+}
+.profile {
+  background-color: #FFF7EF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.form-profile {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.form-group-profile {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.arrow-icon {
+  width: 20px; /* Điều chỉnh kích thước mũi tên */
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+.form-group-profile label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group-profile input,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #e68900;
+}
+.divider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.divider {
+  flex: 0 0 150%;
+  border: 3px solid #FE9328; /* Đường kẻ */
+  margin: 0 5px; /* Khoảng cách giữa đường kẻ và chân mèo */
+}
+.paw-print {
+  width: 90px; /* Kích thước chân mèo */
+  height: auto;
+}
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  padding-right: 30px; /* Để dành chỗ cho biểu tượng */
+}
+
+.edit-icon {
+  position: absolute;
+  right: 10px; /* Khoảng cách từ bên phải */
+  cursor: pointer;
+  font-size: 16px; /* Điều chỉnh kích thước nếu cần */
+  color: black; /* Màu sắc của biểu tượng */
+}

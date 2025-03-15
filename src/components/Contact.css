@@ -1,0 +1,86 @@
+body{
+  background-color: #FFFFFF;
+}
+.contact-form-container {
+  width: 1186px;
+  flex-direction: column; /* Sắp xếp theo chiều dọc */
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center; /* Căn giữa các phần tử con */
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+
+.contact-form-container h2 {
+  text-align: center;
+  color: #D29150; /* Màu cam cho tiêu đề */
+  font-weight: bold;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+.form {
+  flex: 1; /* Chiếm không gian còn lại */
+  margin-right: 20px; /* Khoảng cách giữa hình ảnh và form */
+}
+.form-group {
+  margin-bottom: 15px;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-bottom: 15px;
+}
+.form-content {
+  display: flex; /* Hiển thị flex để sắp xếp ảnh và form */
+  justify-content: space-between; /* Căn chỉnh form và ảnh */
+  align-items: flex-start; /* Định vị các phần tử ở đầu */
+  margin-top: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+}
+.contact-form-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form-container input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f39c12; /* Màu cam cho nút */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form-container button:hover {
+  background-color: #e67e22; /* Màu cam đậm hơn khi hover */
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.form-group i {
+  margin-right: 8px; /* Khoảng cách giữa biểu tượng và text */
+}
+.form-group label {
+  display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-right: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+}

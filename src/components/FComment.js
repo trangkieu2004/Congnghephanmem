@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./FComment.css";
 import logo from "../img/anhnen.png";
 import anhnen from "../img/image 1.png";
 import search from "../img/Search.png";
-import vector from "../img/Vector.png";
 import { Link, useNavigate } from "react-router-dom";
+
 const FComment = ({ username, onLogout }) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
+  const dropdownRef = useRef(null); // Tạo ref cho dropdown
+
+  const toggleDropdown = () => {
+    setDropdownOpen((prev) => !prev);
+  };
+
+  // Đóng dropdown khi nhấp ra ngoài
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="app">
@@ -26,7 +46,6 @@ const FComment = ({ username, onLogout }) => {
                 <Link to="/introduce" className="nav-link">
                   Giới Thiệu
                 </Link>
-                
               </li>
               <li className="nav-item mx-3">
                 <Link to="/services" className="nav-link">
@@ -55,19 +74,39 @@ const FComment = ({ username, onLogout }) => {
           </div>
           <div className="d-flex align-items-center nav-link">
             {username ? (
-              <span style={{ marginLeft: "30px", color: "black", textAlign:"center" }}>
-                {username}
+              <div className="dropdown" ref={dropdownRef}>
                 <span
-                  onClick={onLogout} // Xử lý đăng xuất
                   style={{
-                    cursor: "pointer",
+                    marginLeft: "30px",
                     color: "black",
-                    marginTop: "5px",
+                    textAlign: "center",
+                    cursor: "pointer",
                   }}
+                  onClick={toggleDropdown}
                 >
-                  <img src={vector} alt="Đăng xuất" />
+                  {username} ▼
                 </span>
-              </span>
+                {dropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link to="/profile" className="dropdown-item">
+                      Thông tin cá nhân
+                    </Link>
+                    <Link to="/status-service" className="dropdown-item">
+                      Trạng thái dịch vụ
+                    </Link>
+                    <Link to="/bill" className="dropdown-item">
+                      Hóa đơn
+                    </Link>
+                    <span
+                      className="dropdown-item"
+                      onClick={onLogout} // Xử lý đăng xuất
+                      style={{ cursor: "pointer" }}
+                    >
+                      Log out
+                    </span>
+                  </div>
+                )}
+              </div>
             ) : (
               <span
                 className="nav-link mx-3"
