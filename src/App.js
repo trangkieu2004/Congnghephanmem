@@ -17,6 +17,7 @@ import BookingDoctor from './components/BookingDoctor';
 import Contact from './components/Contact';
 import Account from './components/Account';
 import ServiceStatus from './components/ServiceStatus';
+import Bill from './components/Bill';
 
 const App = () => {
   const [username, setUsername] = useState('');
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/resetpassword" element={<ResetPass />} />
         <Route path="/profile" element={renderWithFooter(Account)} />
         <Route path="/status-service" element={renderWithFooter(ServiceStatus)} />
+        <Route path="/bill" element={renderWithFooter(Bill)} />
         <Route path="/" element={renderWithFooter(Home)} />
         <Route path="/home" element={renderWithFooter(Home)} />
         <Route path="/introduce" element={renderWithFooter(Introduce)} />

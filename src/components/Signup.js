@@ -57,7 +57,7 @@ const Signup = () => {
 
       const response = await axios.post(
         "https://pet-booking-eta.vercel.app/user/register",
-        { username, email, phone, address, password, recaptchaValue }
+        { username, email, phone, address, password, recaptchaValue, role: "USER" }
       );
 
       console.log("Phản hồi từ API:", response);
