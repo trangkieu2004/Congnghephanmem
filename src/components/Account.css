@@ -1,5 +1,4 @@
 
-
 .container-profile {
   display: flex;
   flex-direction: column;
@@ -78,7 +77,7 @@ select {
   justify-content: center;
   margin: 20px 0;
 }
-.divider {
+.dividermeo {
   flex: 0 0 150%;
   border: 3px solid #FE9328; /* Đường kẻ */
   margin: 0 5px; /* Khoảng cách giữa đường kẻ và chân mèo */

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Bill.css";
 import chanmeo from "../img/Home/chan_meo.png";
-import muiten from "../img/Service/image 6.png";
 
 const Bill = () => {
   return (
@@ -12,10 +11,7 @@ const Bill = () => {
         <img src={chanmeo} alt="Chân mèo" className="paw-print" />
         <hr className="divider" />
       </div>
-      <div className="progress-container">
-        <div className="progress-bar">
-          <img src={muiten} alt=""  className="back-progress"/>
-        </div>
+      <div className="container progress-container">
         <table className="info-table">
         <thead>
           <tr>

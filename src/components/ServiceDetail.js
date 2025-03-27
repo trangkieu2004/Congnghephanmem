@@ -22,7 +22,7 @@ const ServiceDetail = () => {
     navigate("/booking", { state: { title, weight: selectedWeight } }); // Đường dẫn đến trang đặt lịch
   };
   const handleBack = () => {
-    navigate("/service-detail", { state: { title, price, image } })
+    navigate(-1);
   };
 
   return (

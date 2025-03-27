@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Service.css';
 import { useNavigate } from 'react-router-dom';
 import chanmeo from '../img/Home/chan_meo.png';
@@ -8,26 +8,31 @@ import doc3 from '../img/Service/image 5.png';
 
 const Service = () => {
   const navigate = useNavigate();
-  const services = [
-    {
-      title: 'Petstation - Tắm sấy',
-      price: 'Giá: 100.000 - 200.000 VND',
-      image: doc1, // Thay bằng đường dẫn hình ảnh thực tế
-      
-    },
-    {
-      title: 'Petstation - Vệ sinh',
-      price: 'Giá: 50.000 - 100.000 VND',
-      image: doc2, // Thay bằng đường dẫn hình ảnh thực tế
-      
-    },
-    {
-      title: 'Petstation - Cắt tỉa',
-      price: 'Giá: 150.000 - 200.000 VND',
-      image: doc3, // Thay bằng đường dẫn hình ảnh thực tế
-      
-    },
-  ];
+  const [services, setServices] = useState([]); 
+  // Danh sách ảnh cố định để gán vào dữ liệu API
+  const serviceImages = [doc1, doc2, doc3];
+  useEffect(() => {
+    const token = localStorage.getItem('token'); // Lấy token từ localStorage
+    fetch('https://pet-booking-eta.vercel.app/services', {
+      headers: {
+        'accept': '*/*',
+        'Authorization': `Bearer ${token}`  // Thêm header Authorization
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('DATA:', data);
+        const mappedServices = data.data.map((service, index) => ({
+          title: service.name,
+          description: service.description,
+          price: `Giá: ${service.price.toLocaleString()} VND`,
+          image: serviceImages[index % serviceImages.length],
+        }));
+        setServices(mappedServices);
+      })
+      .catch((error) => console.error('Lỗi khi lấy danh sách dịch vụ:', error));
+  }, []);
+  
   const handleServiceClick = (service) => {
     navigate('/service-detail', { state: service });
   };

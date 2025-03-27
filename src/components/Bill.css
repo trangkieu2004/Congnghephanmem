@@ -16,8 +16,8 @@
 }
 .divider {
   flex: 0 0 15%;
-  border: 3px solid #FE9328; /* Đường kẻ */
-  margin: 0 5px; /* Khoảng cách giữa đường kẻ và chân mèo */
+  border: 3px solid #FE9328;
+  margin: 0 5px;
 }
 .paw-print {
   width: 90px; /* Kích thước chân mèo */
@@ -29,62 +29,11 @@
   align-items: center;
   justify-content: center;
   margin: 20px 0;
-}
-
-.progress-bar {
-  margin: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-}
-
-.step-bar {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-.step-number {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ddd;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.step-label {
-  margin-top: 5px;
-  font-size: 12px;
-  text-align: center;
-  width: 80px;
-}
-
-.line {
-  width: 50px;
-  height: 3px;
-  margin-top: 40px;
-  padding: 0;
-  background-color: #ddd;
+  padding: 20px;
 }
 .back-progress {
   width: 20px;
   height: 20px;
-}
-.completed .step-number {
-  background-color: #64b5f6; /* Màu xanh dương */
-}
-
-.completed .line {
-  background-color: #64b5f6;
-}
-
-.active .step-number {
-  background-color: #1565c0; /* Màu xanh đậm hơn */
 }
 .info-table {
   width: 100%;
@@ -101,4 +50,7 @@
 
 .info-table th {
   background-color: #D9D9D9;
+}
+.container {
+  padding: 0;
 }

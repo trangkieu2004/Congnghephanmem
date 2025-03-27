@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-around;
   padding-bottom: 60px;
-  flex-wrap: wrap; /* Cho phép các thẻ bác sĩ xuống dòng khi không đủ không gian */
+  flex-wrap: wrap;
 }
 
 .booking-doctor_card {

@@ -92,7 +92,7 @@ const FComment = ({ username, onLogout }) => {
                       Thông tin cá nhân
                     </Link>
                     <Link to="/status-service" className="dropdown-item">
-                      Trạng thái dịch vụ
+                      Danh sách đặt lịch hẹn
                     </Link>
                     <Link to="/bill" className="dropdown-item">
                       Hóa đơn

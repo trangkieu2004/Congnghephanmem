@@ -21,10 +21,17 @@ const Login = ({ setUsername }) => {
       });
 
       console.log('Đăng nhập thành công:', response.data);
+      localStorage.setItem("userId", response.data.data.user._id);
+      localStorage.setItem("token", response.data.data.token);
+      localStorage.setItem("username", inputUsername);
       setUsername(inputUsername); // Lưu tên đăng nhập vào state
       navigate('/'); // Điều hướng tới trang Home (hoặc trang bạn muốn)
 
       toast.success("Đăng nhập thành công!"); // Hiển thị thông báo thành công
+      // Chuyển hướng sau 1 giây để user thấy thông báo
+      setTimeout(() => {
+        navigate('/home');
+      }, 1000);
     } catch (error) {
       // Xử lý lỗi từ phản hồi
       if (error.response) {

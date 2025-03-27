@@ -19,20 +19,20 @@ import Account from './components/Account';
 import ServiceStatus from './components/ServiceStatus';
 import Bill from './components/Bill';
 
+const Layout = ({ children, username, onLogout }) => (
+  <>
+    <FComment username={username} onLogout={onLogout} />
+    {children}
+    <Footer />
+  </>
+);
+
 const App = () => {
   const [username, setUsername] = useState('');
 
   const handleLogout = () => {
     setUsername('');
   };
-
-  const renderWithFooter = (Component) => (
-    <>
-      <FComment username={username} onLogout={handleLogout} />
-      <Component />
-      <Footer />
-    </>
-  );
 
   return (
     <Router>
@@ -41,18 +41,19 @@ const App = () => {
         <Route path="/register" element={<Signup />} />
         <Route path="/forgotpasswork" element={<Forgotpasswork />} />
         <Route path="/resetpassword" element={<ResetPass />} />
-        <Route path="/profile" element={renderWithFooter(Account)} />
-        <Route path="/status-service" element={renderWithFooter(ServiceStatus)} />
-        <Route path="/bill" element={renderWithFooter(Bill)} />
-        <Route path="/" element={renderWithFooter(Home)} />
-        <Route path="/home" element={renderWithFooter(Home)} />
-        <Route path="/introduce" element={renderWithFooter(Introduce)} />
-        <Route path="/services" element={renderWithFooter(Service)} />
-        <Route path="/booking-doctor" element={renderWithFooter(BookingDoctor)} />
-        <Route path="/contact" element={renderWithFooter(Contact)} />
-        <Route path="/service-detail" element={renderWithFooter(ServiceDetail)} />
-        <Route path="/booking" element={renderWithFooter(AppointmentForm)} />
-        <Route path="/confirm" element={renderWithFooter(ConfirmBooking)} />
+
+        <Route path="/profile" element={<Layout username={username} onLogout={handleLogout}><Account /></Layout>} />
+        <Route path="/status-service" element={<Layout username={username} onLogout={handleLogout}><ServiceStatus /></Layout>} />
+        <Route path="/bill" element={<Layout username={username} onLogout={handleLogout}><Bill /></Layout>} />
+        <Route path="/" element={<Layout username={username} onLogout={handleLogout}><Home /></Layout>} />
+        <Route path="/home" element={<Layout username={username} onLogout={handleLogout}><Home /></Layout>} />
+        <Route path="/introduce" element={<Layout username={username} onLogout={handleLogout}><Introduce /></Layout>} />
+        <Route path="/services" element={<Layout username={username} onLogout={handleLogout}><Service /></Layout>} />
+        <Route path="/booking-doctor" element={<Layout username={username} onLogout={handleLogout}><BookingDoctor /></Layout>} />
+        <Route path="/contact" element={<Layout username={username} onLogout={handleLogout}><Contact /></Layout>} />
+        <Route path="/service-detail" element={<Layout username={username} onLogout={handleLogout}><ServiceDetail /></Layout>} />
+        <Route path="/booking" element={<Layout username={username} onLogout={handleLogout}><AppointmentForm /></Layout>} />
+        <Route path="/confirm" element={<Layout username={username} onLogout={handleLogout}><ConfirmBooking /></Layout>} />
       </Routes>
     </Router>
   );
