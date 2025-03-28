@@ -23,6 +23,7 @@ const Service = () => {
       .then((data) => {
         console.log('DATA:', data);
         const mappedServices = data.data.map((service, index) => ({
+          _id: service._id,
           title: service.name,
           description: service.description,
           price: `Giá: ${service.price.toLocaleString()} VND`,
