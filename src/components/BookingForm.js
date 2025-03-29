@@ -24,10 +24,10 @@ const BookingForm = ({ doctor, onClose }) => {
   const [showConfirmation, setShowConfirmation] = useState(false);
 
   useEffect(() => {
-    if (doctor?.id) {
+    if (doctor?._id) {
       setFormData((prev) => ({
         ...prev,
-        vetDoctor: doctor.id, // Cập nhật ID bác sĩ
+        vetDoctor: doctor._id, // Cập nhật ID bác sĩ
       }));
     }
   }, [doctor]);
@@ -64,7 +64,7 @@ const BookingForm = ({ doctor, onClose }) => {
     const dataToSend = {
       ...formData,
       appointmentTime: formattedAppointmentTime,
-      vetDoctor: doctor?.id, // Đảm bảo gửi id thay vì name
+      vetDoctor: doctor?._id, // Đảm bảo gửi id thay vì name
     };
 
     console.log("Dữ liệu gửi đi:", JSON.stringify(dataToSend));

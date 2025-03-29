@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./ServiceStatus.css";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import chanmeo from "../img/Home/chan_meo.png";
 import cancel from "../img/Delete.png";
 
 const ServiceStatus = () => {
   const [appointments, setAppointments] = useState([]); // State để lưu danh sách lịch hẹn
-  const token = localStorage.getItem("token"); // Lấy token từ localStorage
-  const currentUserId = localStorage.getItem("userId"); // Lấy userId từ localStorage
-  console.log("🔍 userId hiện tại:", currentUserId);
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
   useEffect(() => {
     if (!token) {
-      console.error("Chưa có token");
+      alert("Bạn chưa đăng nhập!");
+      navigate("/login");
       return;
     }
-
-    const fetchAppointments = async () => {
+    const fetchSchedules = async () => {
       try {
         const response = await axios.get(
           "https://pet-booking-eta.vercel.app/appointments",
@@ -24,32 +24,44 @@ const ServiceStatus = () => {
           }
         );
 
-        console.log("📦 Dữ liệu API trả về:", response.data);
+        console.log("📦 Dữ liệu từ API:", response.data);
 
         if (Array.isArray(response.data.data)) {
-          const filteredAppointments = response.data.data.filter(
-            (appointment) => {
-              console.log(
-                `🧐 So sánh: ${appointment.userId} === ${currentUserId}`
-              );
-              return appointment.userId === currentUserId;
-            }
-          );
-          console.log("✅ Lịch hẹn của user:", filteredAppointments);
-          setAppointments(filteredAppointments); // Lưu toàn bộ danh sách lịch hẹn
+          setAppointments(response.data.data);
         } else {
           console.error("❌ Dữ liệu không hợp lệ!", response.data);
-          setAppointments([]); // Đảm bảo state không bị lỗi
+          setAppointments([]);
         }
       } catch (error) {
-        console.error("🚨 Lỗi khi lấy danh sách lịch hẹn:", error);
+        console.error("🚨 Lỗi khi lấy dữ liệu:", error);
         setAppointments([]);
       }
     };
 
-    fetchAppointments();
-  }, [token]);
+    fetchSchedules();
+  }, [token, navigate]);
+  const handleCancelAppointment = async (id) => {
+    const confirmDelete = window.confirm("Bạn có chắc chắn muốn hủy lịch hẹn này?");
+    if (!confirmDelete) return;
 
+    try {
+      const response = await axios.delete(
+        `https://pet-booking-eta.vercel.app/appointments/${id}/cancel`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+
+      console.log("🗑️ Xóa lịch hẹn thành công:", response.data);
+      alert("Lịch hẹn đã được hủy!");
+  
+      // Cập nhật danh sách hiển thị
+      setAppointments((prevData) => prevData.filter((item) => item._id !== id));
+    } catch (error) {
+      console.error("❌ Lỗi khi hủy lịch hẹn:", error.response?.data || error.message);
+      alert("Hủy lịch hẹn thất bại!");
+    }
+  };
   return (
     <div className="container status-service">
       <h2>DANH SÁCH ĐẶT LỊCH HẸN</h2>
@@ -71,6 +83,7 @@ const ServiceStatus = () => {
               <th>Bác sỹ</th>
               <th>Ngày</th>
               <th>Phương thức thanh toán</th>
+              <th>Giá</th>
               <th>Trạng thái</th>
               <th>Tùy chọn</th>
             </tr>
@@ -88,9 +101,10 @@ const ServiceStatus = () => {
                   <td>{appointment.vetDoctor?.name || "Chưa có bác sĩ"}</td>
                   <td>{new Date(appointment.appointmentTime).toLocaleString()}</td>
                   <td>{appointment.paymentMethod}</td>
+                  <td>{appointment.service?.price} VND</td>
                   <td>{appointment.status}</td>
                   <td>
-                    <button>
+                    <button onClick={() => handleCancelAppointment(appointment._id)}>
                       <img src={cancel} alt="Delete" />
                     </button>
                   </td>
