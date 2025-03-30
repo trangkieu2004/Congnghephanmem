@@ -33,20 +33,18 @@ const Login = ({ setUsername }) => {
         navigate('/home');
       }, 1000);
     } catch (error) {
-      // Xử lý lỗi từ phản hồi
-      if (error.response) {
-        const messages = error.response.data.response?.message;
-
-        if (Array.isArray(messages)) {
-          messages.forEach(msg => toast.error(msg)); // Hiển thị từng thông báo lỗi
-        } else {
-          toast.error('Đăng nhập không thành công'); // Thông báo lỗi chung
-        }
-      } else {
-        toast.error('Đã xảy ra lỗi. Vui lòng thử lại sau.');
+      console.log("Lỗi nhận được từ API:", error.response?.data);
+    
+      let errorMessage = "Có lỗi xảy ra, vui lòng thử lại!";
+    
+      if (Array.isArray(error.response?.data?.response?.message)) {
+        // Nếu `message` là mảng, nối tất cả lỗi lại
+        errorMessage = error.response.data.response.message.join(", ");
+      } else if (error.response?.data?.message) {
+        errorMessage = error.response.data.message;
       }
-
-      console.error('Lỗi:', error);
+    
+      toast.error(errorMessage); // Hiển thị lỗi từ API hoặc lỗi mặc định
     }
   };
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ServiceStatus.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "react-toastify/dist/ReactToastify.css";
 import chanmeo from "../img/Home/chan_meo.png";
 import cancel from "../img/Delete.png";
 
@@ -42,25 +43,27 @@ const ServiceStatus = () => {
   }, [token, navigate]);
   const handleCancelAppointment = async (id) => {
     const confirmDelete = window.confirm("Bạn có chắc chắn muốn hủy lịch hẹn này?");
-    if (!confirmDelete) return;
+  if (!confirmDelete) return;
 
-    try {
-      const response = await axios.delete(
-        `https://pet-booking-eta.vercel.app/appointments/${id}/cancel`,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+  try {
+    const response = await axios.delete(
+      `https://pet-booking-eta.vercel.app/appointments/${id}/cancel`,
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
 
-      console.log("🗑️ Xóa lịch hẹn thành công:", response.data);
-      alert("Lịch hẹn đã được hủy!");
-  
-      // Cập nhật danh sách hiển thị
-      setAppointments((prevData) => prevData.filter((item) => item._id !== id));
-    } catch (error) {
-      console.error("❌ Lỗi khi hủy lịch hẹn:", error.response?.data || error.message);
-      alert("Hủy lịch hẹn thất bại!");
-    }
+    console.log("🗑️ Xóa lịch hẹn thành công:", response.data);
+    alert("Lịch hẹn đã được hủy!");
+
+    setAppointments((prevData) =>
+      prevData.map((item) =>
+        item._id === id ? { ...item, status: "canceled" } : item
+      )
+    );
+  } catch (error) {
+    const errorMessage = error.response?.data?.message || "Hủy lịch hẹn thất bại!";
+    console.error("❌ Lỗi khi hủy lịch hẹn:", errorMessage);
+    alert(`🚨 Lỗi: ${errorMessage}`);
+  }
   };
   return (
     <div className="container status-service">
